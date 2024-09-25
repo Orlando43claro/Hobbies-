@@ -1,59 +1,35 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Mi Aplicación</title>
+    <title>Fusion App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <h1>Nombre de la App</h1>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <div class="header-icons">
-                <a href="#" class="notification-icon"><i class="fas fa-bell"></i></a>
-                <a href="#" class="message-icon"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Feed</a></li>
+                <li><a href="#">Mensajes</a></li>
+                <li><a href="#">Explorar</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <main>
-        <div class="content">
-            <h2>Publicaciones Recientes</h2>
-            <!-- Aquí irán las publicaciones -->
-        </div>
-    </main>
-
+    
+    <section id="feed">
+        <!-- Aquí irán las publicaciones estilo Instagram/YouTube -->
+    </section>
+    
+    <section id="chat">
+        <!-- Aquí estará la mensajería estilo Telegram -->
+    </section>
+    
     <footer>
-        <div class="footer-container">
-            <a href="#" class="nav-icon"><i class="fas fa-home"></i></a>
-            <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
-            <a href="#" class="nav-icon create-icon" id="createPostButton"><i class="fas fa-plus"></i></a>
-            <a href="#" class="nav-icon"><i class="fas fa-bell"></i></a>
-            <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
-        </div>
+        <p>© 2024 Fusion App</p>
     </footer>
 
-    <!-- Modal para subir publicaciones -->
-    <div id="uploadModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">×</span>
-            <h2>Subir Nueva Publicación</h2>
-            <form id="uploadForm">
-                <input type="file" id="mediaUpload" accept="image/*,video/*" required>
-                <textarea id="description" placeholder="Escribe una descripción..." required></textarea>
-                <button type="submit">Subir</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

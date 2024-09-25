@@ -1,33 +1,31 @@
-// app.js
-
 const feed = document.getElementById('feed');
 
-// Simulación de publicaciones de usuarios
+// Simulación de publicaciones (imágenes y videos)
 const publicaciones = [
     {
         id: 1,
         usuario: 'Usuario1',
         tipo: 'imagen',
         contenido: 'https://via.placeholder.com/300',
-        descripcion: 'Mi primera foto',
+        descripcion: 'Mi primera imagen',
     },
     {
         id: 2,
         usuario: 'Usuario2',
         tipo: 'video',
         contenido: 'https://www.w3schools.com/html/mov_bbb.mp4',
-        descripcion: 'Un video increíble',
+        descripcion: 'Mi primer video',
     },
     {
         id: 3,
         usuario: 'Usuario3',
         tipo: 'imagen',
         contenido: 'https://via.placeholder.com/300',
-        descripcion: 'Otra imagen genial',
+        descripcion: 'Una segunda imagen',
     }
 ];
 
-// Función para mostrar las publicaciones en el feed
+// Función para cargar publicaciones
 function cargarPublicaciones() {
     publicaciones.forEach(post => {
         const postElement = document.createElement('div');

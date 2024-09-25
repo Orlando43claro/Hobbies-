@@ -17,10 +17,29 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 24px; /* Tamaño de los íconos */
 }
 
-#feed, #chat {
+header nav ul li a:hover {
+    color: #00aaff;
+}
+
+#feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
+}
+
+.feed-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.feed-item img, .feed-item video {
+    width: 100%;
+    height: auto;
 }
 
 footer {
@@ -31,15 +50,4 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-    }
-
-    #feed, #chat {
-        padding: 10px;
-    }
 }

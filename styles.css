@@ -1,149 +1,45 @@
-/* styles.css */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.header-container, .footer-container {
+header nav ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#feed, #chat {
+    padding: 20px;
+}
+
+footer {
     background-color: #333;
     color: white;
-}
-
-.header-container .logo h1, .footer-container .nav-icon {
-    margin: 0;
-}
-
-.search-bar input {
-    padding: 5px;
-    margin-right: 5px;
-}
-
-.search-bar button {
-    padding: 5px;
-}
-
-.content {
-    padding: 20px;
-}
-
-.post-card {
-    display: flex;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
+    text-align: center;
     padding: 10px;
-    border-radius: 5px;
-}
-
-.post-card img {
-    max-width: 150px;
-    margin-right: 20px;
-}
-
-.post-info {
-    flex: 1;
-}
-
-.post-actions button {
-    margin-right: 10px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.post-actions button:hover {
-    transform: scale(1.1);
-}
-
-.footer-container .nav-icon {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.footer-container .create-icon {
-    font-size: 24px;
-}
-
-/* Estilos para el modal */
-.modal {
-    display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
 }
 
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-}
+/* Responsivo */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
 
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.upload-form {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.upload-form h2 {
-    margin-bottom: 10px;
-}
-
-.upload-form form {
-    display: flex;
-    flex-direction: column;
-}
-
-.upload-form input, .upload-form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.upload-form button {
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.upload-form button:hover {
-    background-color: #0056b3;
+    #feed, #chat {
+        padding: 10px;
+    }
 }

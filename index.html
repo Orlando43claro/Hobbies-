@@ -11,7 +11,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <h3>Hobbies</h3>
+                <h1>Nombre de la App</h1>
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="Buscar...">
@@ -27,24 +27,16 @@
     <main>
         <div class="content">
             <h2>Publicaciones Recientes</h2>
-            <div class="post-card">
-                <img src="ruta/a/la/imagen.jpg" alt="Descripción de la imagen">
-                <div class="post-info">
-                    <h3>Título de la Publicación</h3>
-                    <p>Descripción breve de la publicación...</p>
-                    <div class="post-actions">
-                        <button class="like-button"><i class="fas fa-heart"></i> Me gusta</button>
-                        <button class="comment-button"><i class="fas fa-comment"></i> Comentar</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Repite el bloque anterior para más publicaciones -->
+            <!-- Aquí irán las publicaciones -->
         </div>
-        <div class="video-player">
-            <video controls>
-                <source src="ruta/al/video.mp4" type="video/mp4">
-                Tu navegador no soporta la etiqueta de video.
-            </video>
+
+        <div class="upload-form">
+            <h2>Subir Nueva Publicación</h2>
+            <form id="uploadForm">
+                <input type="file" id="mediaUpload" accept="image/*,video/*" required>
+                <textarea id="description" placeholder="Escribe una descripción..." required></textarea>
+                <button type="submit">Subir</button>
+            </form>
         </div>
     </main>
 
@@ -52,11 +44,24 @@
         <div class="footer-container">
             <a href="#" class="nav-icon"><i class="fas fa-home"></i></a>
             <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
-            <a href="#" class="nav-icon create-icon"><i class="fas fa-plus"></i></a>
+            <a href="#" class="nav-icon create-icon" id="createPostButton"><i class="fas fa-plus"></i></a>
             <a href="#" class="nav-icon"><i class="fas fa-bell"></i></a>
             <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
         </div>
     </footer>
+
+    <!-- Modal para subir publicaciones -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h2>Subir Nueva Publicación</h2>
+            <form id="uploadForm">
+                <input type="file" id="mediaUpload" accept="image/*,video/*" required>
+                <textarea id="description" placeholder="Escribe una descripción..." required></textarea>
+                <button type="submit">Subir</button>
+            </form>
+        </div>
+    </div>
 
     <script src="scripts.js"></script>
 </body>

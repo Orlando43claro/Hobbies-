@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Mi Aplicación</title>
 </head>
@@ -11,15 +11,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <h1>Hobbies</h1>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <div class="header-icons">
-                <a href="#" class="notification-icon"><i class="fas fa-bell"></i></a>
-                <a href="#" class="message-icon"><i class="fas fa-envelope"></i></a>
+                <h1>Mi Aplicación</h1>
             </div>
         </div>
     </header>
@@ -46,6 +38,10 @@
                 Tu navegador no soporta la etiqueta de video.
             </video>
         </div>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*,video/*">
+            <button type="submit">Subir</button>
+        </form>
     </main>
 
     <footer>
@@ -53,10 +49,11 @@
             <a href="#" class="nav-icon"><i class="fas fa-home"></i></a>
             <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
             <a href="#" class="nav-icon create-icon"><i class="fas fa-plus"></i></a>
-            <a href="#" class="nav-icon"><i class="fas fa-bell"></i></a>
             <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
         </div>
     </footer>
+
+    <button id="theme-toggle">Cambiar Tema</button>
 
     <script src="scripts.js"></script>
 </body>

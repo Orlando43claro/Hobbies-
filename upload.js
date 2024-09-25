@@ -44,8 +44,16 @@ publishButton.addEventListener('click', () => {
                 alert('Función de comentar aún no implementada.');
             });
 
+            const shareButton = document.createElement('button');
+            shareButton.classList.add('share-button');
+            shareButton.innerHTML = '<i class="fas fa-share"></i> Compartir';
+            shareButton.addEventListener('click', () => {
+                alert('Función de compartir aún no implementada.');
+            });
+
             postActions.appendChild(likeButton);
             postActions.appendChild(commentButton);
+            postActions.appendChild(shareButton);
 
             postInfo.appendChild(postTitle);
             postInfo.appendChild(postDescription);

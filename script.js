@@ -1,58 +1,55 @@
-// script.js
+// app.js
 
-// Simulación de publicaciones (pueden venir desde una base de datos)
+const feed = document.getElementById('feed');
+
+// Simulación de publicaciones de usuarios
 const publicaciones = [
     {
-        usuario: "Juan",
-        tipo: "imagen",
-        contenido: "https://via.placeholder.com/300",
-        descripcion: "Disfrutando del atardecer!"
+        id: 1,
+        usuario: 'Usuario1',
+        tipo: 'imagen',
+        contenido: 'https://via.placeholder.com/300',
+        descripcion: 'Mi primera foto',
     },
     {
-        usuario: "María",
-        tipo: "video",
-        contenido: "https://www.w3schools.com/html/mov_bbb.mp4",
-        descripcion: "Mi último vlog de viajes!"
+        id: 2,
+        usuario: 'Usuario2',
+        tipo: 'video',
+        contenido: 'https://www.w3schools.com/html/mov_bbb.mp4',
+        descripcion: 'Un video increíble',
     },
     {
-        usuario: "Carlos",
-        tipo: "texto",
-        contenido: "Hoy fue un día increíble, ¡me siento muy motivado!",
-        descripcion: ""
+        id: 3,
+        usuario: 'Usuario3',
+        tipo: 'imagen',
+        contenido: 'https://via.placeholder.com/300',
+        descripcion: 'Otra imagen genial',
     }
 ];
 
-// Función para renderizar el feed
-function cargarFeed() {
-    const feed = document.getElementById('feed');
-    publicaciones.forEach(publicacion => {
-        const post = document.createElement('div');
-        post.classList.add('post');
-        
+// Función para mostrar las publicaciones en el feed
+function cargarPublicaciones() {
+    publicaciones.forEach(post => {
+        const postElement = document.createElement('div');
+        postElement.classList.add('feed-item');
+
         let contenidoHTML = '';
-        
-        if (publicacion.tipo === 'imagen') {
-            contenidoHTML = `<img src="${publicacion.contenido}" alt="Imagen de ${publicacion.usuario}">`;
-        } else if (publicacion.tipo === 'video') {
+        if (post.tipo === 'imagen') {
+            contenidoHTML = `<img src="${post.contenido}" alt="Imagen de ${post.usuario}">`;
+        } else if (post.tipo === 'video') {
             contenidoHTML = `<video controls>
-                                <source src="${publicacion.contenido}" type="video/mp4">
+                                <source src="${post.contenido}" type="video/mp4">
                              </video>`;
-        } else if (publicacion.tipo === 'texto') {
-            contenidoHTML = `<p>${publicacion.contenido}</p>`;
         }
 
-        post.innerHTML = `
-            <div class="content">
-                <h3>${publicacion.usuario}</h3>
-                ${contenidoHTML}
-                <p>${publicacion.descripcion}</p>
-            </div>
+        postElement.innerHTML = `
+            <h3>${post.usuario}</h3>
+            ${contenidoHTML}
+            <p>${post.descripcion}</p>
         `;
 
-        feed.appendChild(post);
+        feed.appendChild(postElement);
     });
 }
 
-// Cargar el feed al iniciar la página
-window.onload = cargarFeed;
-
+cargarPublicaciones();

@@ -64,10 +64,6 @@ body {
     transform: scale(1.1);
 }
 
-.video-player {
-    margin-top: 20px;
-}
-
 .footer-container .nav-icon {
     color: white;
     text-decoration: none;

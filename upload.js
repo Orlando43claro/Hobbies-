@@ -1,5 +1,4 @@
 const publishButton = document.getElementById('publish-button');
-const feed = document.getElementById('feed');
 
 publishButton.addEventListener('click', () => {
     const fileInput = document.getElementById('file-input');

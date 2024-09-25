@@ -17,41 +17,32 @@
     </header>
 
     <main>
-        <div class="content">
+        <div class="content" id="feed">
             <h2>Publicaciones Recientes</h2>
-            <div class="post-card">
-                <img src="ruta/a/la/imagen.jpg" alt="Descripción de la imagen">
-                <div class="post-info">
-                    <h3>Título de la Publicación</h3>
-                    <p>Descripción breve de la publicación...</p>
-                    <div class="post-actions">
-                        <button class="like-button"><i class="fas fa-heart"></i> Me gusta</button>
-                        <button class="comment-button"><i class="fas fa-comment"></i> Comentar</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Repite el bloque anterior para más publicaciones -->
+            <!-- Aquí se mostrarán las publicaciones -->
         </div>
-        <div class="video-player">
-            <video controls>
-                <source src="ruta/al/video.mp4" type="video/mp4">
-                Tu navegador no soporta la etiqueta de video.
-            </video>
-        </div>
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" accept="image/*,video/*">
-            <button type="submit">Subir</button>
-        </form>
     </main>
 
     <footer>
         <div class="footer-container">
             <a href="#" class="nav-icon"><i class="fas fa-home"></i></a>
             <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
-            <a href="#" class="nav-icon create-icon"><i class="fas fa-plus"></i></a>
+            <a href="#" class="nav-icon create-icon" id="open-modal"><i class="fas fa-plus"></i></a>
             <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
         </div>
     </footer>
+
+    <div id="upload-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal">×</span>
+            <h2>Subir Publicación</h2>
+            <form id="upload-form">
+                <input type="file" id="file-input" accept="image/*,video/*">
+                <input type="text" id="description-input" placeholder="Escribe una descripción...">
+                <button type="button" id="publish-button">Publicar</button>
+            </form>
+        </div>
+    </div>
 
     <button id="theme-toggle">Cambiar Tema</button>
 

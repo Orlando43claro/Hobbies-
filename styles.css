@@ -1,31 +1,23 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-bottom: 60px; /* Espacio para el footer fijo */
 }
 
-.header-container, .footer-container {
+.header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header-container .logo h1, .footer-container .nav-icon {
+.logo h1 {
     margin: 0;
-}
-
-.search-bar input {
-    padding: 5px;
-    margin-right: 5px;
-}
-
-.search-bar button {
-    padding: 5px;
 }
 
 .content {
@@ -33,47 +25,84 @@ body {
 }
 
 .post-card {
-    display: flex;
+    background-color: #fff;
+    padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .post-card img {
-    max-width: 150px;
-    margin-right: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
 .post-info {
-    flex: 1;
+    margin-top: 10px;
 }
 
 .post-actions button {
     margin-right: 10px;
-    padding: 5px 10px;
-    border: none;
     background-color: #007bff;
-    color: white;
-    border-radius: 5px;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
     cursor: pointer;
-    transition: transform 0.2s;
 }
 
 .post-actions button:hover {
-    transform: scale(1.1);
+    background-color: #0056b3;
 }
 
-.video-player {
-    margin-top: 20px;
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.footer-container .nav-icon {
-    color: white;
+.footer-container a {
+    color: #333;
     text-decoration: none;
-    padding: 10px;
 }
 
-.footer-container .create-icon {
-    font-size: 24px;
+#theme-toggle {
+    position: fixed;
+    bottom: 70px; /* Ajustado para no superponerse con el footer */
+    right: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background-color: #0056b3;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme .header-container, .dark-theme .footer-container {
+    background-color: #444;
+}
+
+.dark-theme .post-card {
+    background-color: #555;
+}
+
+.dark-theme .post-actions button {
+    background-color: #ff5722;
+}
+
+.dark-theme .post-actions button:hover {
+    background-color: #e64a19;
 }
